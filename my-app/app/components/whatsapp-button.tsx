@@ -2,7 +2,8 @@ import { MessageCircle } from 'lucide-react';
 
 export function WhatsAppButton() {
   const phoneNumber = '+972501234567'; // Replace with actual number
-  const message = 'Hi, I would like to inquire about real estate legal services.';
+  const message =
+    "Hello, I need legal assistance for a real estate transaction in Israel. Please contact me at your earliest convenience.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
