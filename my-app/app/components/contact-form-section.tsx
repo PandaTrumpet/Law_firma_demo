@@ -631,6 +631,7 @@ export function ContactFormSection() {
                       onChange={handleChange}
                       required
                       className="
+                        cursor-pointer
                         w-full rounded-xl px-4 py-3
                         bg-[#0B1726]
                         border border-white/10
@@ -682,6 +683,7 @@ export function ContactFormSection() {
                 <button
                   type="submit"
                   className="
+                    cursor-pointer
                     w-full inline-flex items-center justify-center gap-2
                     rounded-xl px-8 py-4
                     bg-[#c9a961] text-[#071023]

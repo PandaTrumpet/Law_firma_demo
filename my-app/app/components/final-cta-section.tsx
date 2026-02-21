@@ -193,6 +193,7 @@ export function FinalCTASection() {
             <button
               onClick={() => scrollToSection("contact")}
               className="
+                cursor-pointer
                 group inline-flex items-center justify-center gap-3
                 rounded-xl px-9 py-4 sm:px-12 sm:py-5
                 bg-[#c9a961] text-[#071023]

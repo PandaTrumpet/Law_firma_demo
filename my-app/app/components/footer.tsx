@@ -190,6 +190,7 @@ export function Footer() {
           <motion.div variants={m.item}>
             <div
               className={[
+                "  cursor-pointer",
                 "flex items-center gap-3",
                 isRTL ? "flex-row-reverse" : "",
               ].join(" ")}
@@ -243,6 +244,7 @@ export function Footer() {
                   <button
                     onClick={() => scrollToSection(l.id)}
                     className="
+                      cursor-pointer
                       text-slate-200/60 hover:text-[#c9a961]
                       transition-colors text-sm
                       focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]/50

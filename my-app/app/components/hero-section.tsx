@@ -312,6 +312,7 @@ export function HeroSection() {
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="
+                  cursor-pointer
                     inline-flex items-center justify-center
                     rounded-xl px-6 sm:px-7 py-3.5
                     text-[15px] sm:text-[16px]
@@ -328,6 +329,7 @@ export function HeroSection() {
                 <button
                   onClick={() => scrollToSection("calculator")}
                   className="
+                    cursor-pointer
                     inline-flex items-center justify-center
                     rounded-xl px-6 sm:px-7 py-3.5
                     text-[15px] sm:text-[16px]

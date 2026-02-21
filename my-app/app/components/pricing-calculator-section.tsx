@@ -408,6 +408,7 @@ export function PricingCalculatorSection() {
                           })
                         }
                         className={[
+                          "cursor-pointer",
                           "rounded-xl px-3 py-3",
                           "text-[13px] sm:text-[14px]",
                           "font-semibold transition-all",
@@ -551,6 +552,7 @@ export function PricingCalculatorSection() {
                     })
                   }
                   className="
+                    cursor-pointer
     w-full rounded-xl px-4 py-3
     bg-[#132235]
     border border-white/15
@@ -598,6 +600,7 @@ export function PricingCalculatorSection() {
                           setFormData({ ...formData, urgency: option.value })
                         }
                         className={[
+                          "  cursor-pointer",
                           "rounded-xl px-3 py-3 text-left",
                           isRTL ? "text-right" : "text-left",
                           "font-semibold transition-all",
@@ -639,6 +642,7 @@ export function PricingCalculatorSection() {
                     })
                   }
                   className={`
+                      cursor-pointer
     relative w-12 h-6 rounded-full
     transition-colors duration-300
     ${formData.dueDiligence ? "bg-[#c9a961]" : "bg-white/20"}
@@ -768,6 +772,7 @@ export function PricingCalculatorSection() {
             <button
               type="button"
               className="
+                cursor-pointer
                 w-full inline-flex items-center justify-center
                 rounded-xl
                 py-3.5

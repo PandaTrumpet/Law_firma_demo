@@ -203,6 +203,7 @@ export function RiskAwarenessSection() {
           <button
             onClick={() => scrollToSection("contact")}
             className="
+              cursor-pointer
       inline-flex items-center justify-center gap-2
       rounded-xl
       px-6 sm:px-7 py-3.5

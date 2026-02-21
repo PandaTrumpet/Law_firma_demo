@@ -236,7 +236,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => scrollToSection("top")}
-            className="flex items-center gap-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4CC2FF]/50 rounded-md"
+            className="flex items-center gap-3 cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4CC2FF]/50 rounded-md"
             aria-label="Go to top"
           >
             <div className="w-9 h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-[#c9a961] to-[#a68a4e] rounded-md flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
@@ -260,7 +260,7 @@ export function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-[#c9a961] transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4CC2FF]/40 rounded-md px-1"
+                className="text-gray-300 cursor-pointer hover:text-[#c9a961] transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4CC2FF]/40 rounded-md px-1"
               >
                 {item.label}
               </button>
