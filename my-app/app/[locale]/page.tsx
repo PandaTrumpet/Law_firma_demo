@@ -1,6 +1,8 @@
 
 import { ContactFormSection } from "../components/contact-form-section";
 import { CRMSection } from "../components/crm-section";
+import { DigitalSystemSection } from "../components/DigitalSystemSection";
+
 import { FinalCTASection } from "../components/final-cta-section";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
@@ -20,10 +22,13 @@ export default function Home() {
       <main>
         <WhatsAppButton />
         <HeroSection />
+
         <RiskAwarenessSection />
         <ServicesSection />
         <PricingCalculatorSection />
+        <DigitalSystemSection />
         <ProcessSection />
+
         <CRMSection />
         <TestimonialsSection />
         <ContactFormSection />

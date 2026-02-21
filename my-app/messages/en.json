@@ -492,5 +492,86 @@
       "terms": "Terms of Service",
       "notice": "Legal Notice"
     }
+  },
+  "digitalSystem": {
+    "seo": {
+      "sectionLabel": "Digital system",
+      "ctaAria": "Open SavonDev website"
+    },
+    "badge": "Legal-Tech / Automation",
+    "title": {
+      "line1": "The digital system behind this website",
+      "accent": "turning it into a real business tool"
+    },
+    "subtitle": "This landing page demonstrates how a law firm can automate and scale operations: inbound requests, communication, and process visibility.",
+    "howItWorks": "How it works",
+    "cards": {
+      "crm": {
+        "title": "CRM for inquiries & intake",
+        "description": "Every request is captured automatically, assigned a status, and routed to the right person—without manual chaos.",
+        "features": [
+          "Statuses & ownership",
+          "Communication history",
+          "Lead segmentation",
+          "Response & task timelines"
+        ]
+      },
+      "whatsapp": {
+        "title": "WhatsApp automation",
+        "description": "Instant auto-reply for clients plus team notifications. Status updates, reminders, and message templates.",
+        "features": [
+          "Auto-reply in seconds",
+          "Statuses “in review / documents requested”",
+          "Templates & tags",
+          "Deadline reminders"
+        ]
+      },
+      "calculator": {
+        "title": "Online fee calculator",
+        "description": "Increases engagement and helps filter serious inquiries before the first consultation.",
+        "features": [
+          "Preliminary estimate",
+          "Lead qualification",
+          "Deal parameters capture",
+          "Higher CTA conversion"
+        ]
+      },
+      "lang": {
+        "title": "Multilingual (EN | HE | RU)",
+        "description": "Comfortable for local clients and foreign investors—language, direction, and UX adapt automatically.",
+        "features": [
+          "RTL for Hebrew",
+          "Language-aware SEO",
+          "Single design-system layer",
+          "Localized forms"
+        ]
+      },
+      "control": {
+        "title": "Inquiry & process control",
+        "description": "A clear digital workflow for managing incoming requests and case stages—without losses or manual chaos.",
+        "features": [
+          "All requests captured",
+          "Client prioritization",
+          "Processing timelines",
+          "Status reporting"
+        ]
+      },
+      "secureDb": {
+        "title": "Secure client database",
+        "description": "Structured storage for client data and documents. Access control and a tidy, reliable workflow.",
+        "features": [
+          "Client data structure",
+          "Documents & statuses",
+          "Roles & permissions",
+          "Exports & reports"
+        ]
+      }
+    },
+    "bottom": {
+      "noteStrong": "This is not just a landing page.",
+      "note": "It’s a system for generating and managing clients: automation, process transparency, and structured intake.",
+      "cta": "I want a system like this",
+      "disclaimer": "Mini-CTA: a demonstration of digital-system capabilities without conflicting with the legal offer."
+    }
   }
 }
