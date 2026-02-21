@@ -1,5 +1,496 @@
 {
-  "common": {
-    "title": "Home"
+  "header": {
+    "brand": {
+      "name": "LegalGuard",
+      "subtitle": "Real Estate Law"
+    },
+    "nav": {
+      "services": "Services",
+      "pricing": "Pricing",
+      "process": "Process",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "cta": {
+      "getConsultation": "Get a Consultation"
+    },
+    "meta": {
+      "responseTime": "We respond within 24 hours."
+    },
+    "aria": {
+      "goTop": "Go to top",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "primaryNav": "Primary navigation",
+      "mobileMenu": "Mobile navigation menu"
+    }
+  },
+  "whatsapp": {
+    "message": "Hello, I need legal assistance for a real estate transaction in Israel. Please contact me at your earliest convenience.",
+    "aria": "Contact us on WhatsApp"
+  },
+  "hero": {
+    "badges": {
+      "properties": "₪2M+ Properties",
+      "investors": "Foreign Investors"
+    },
+    "title": {
+      "line1": "Buying Property",
+      "line2": "in Israel?",
+      "accent": "Protect Your Investment Legally."
+    },
+    "subtitle": "A single mistake in a contract can cost hundreds of thousands of shekels. We manage your transaction from due diligence to final registration.",
+    "cta": {
+      "primary": "Get a Personal Consultation",
+      "secondary": "Calculate Legal Fees"
+    },
+    "metrics": {
+      "transactions": "Transactions",
+      "secured": "Secured",
+      "success": "Success Rate"
+    },
+    "card": {
+      "kicker": "Trusted by",
+      "title": "High-Net-Worth Clients",
+      "subtitle": "Tel Aviv & Beyond"
+    },
+    "media": {
+      "skylineAlt": "Tel Aviv skyline",
+      "officeAlt": "Premium law office interior",
+      "propertyAlt": "Luxury property in Tel Aviv",
+      "attorneyAlt": "Professional attorney portrait"
+    }
+  },
+  "risk": {
+    "badge": "Risk Awareness",
+    "title": {
+      "line1": "What Are You Risking",
+      "accent": "Without Legal Protection?"
+    },
+    "subtitle": "Most property buyers underestimate the legal complexities involved in Israeli real estate transactions. Here is what is at stake.",
+    "cards": {
+      "liabilities": {
+        "title": "Hidden Property Liabilities",
+        "description": "Undisclosed liens, easements, or legal encumbrances that could cost you millions. These issues often remain invisible until it is too late.",
+        "impact": "Potential loss: ₪200,000–500,000+"
+      },
+      "contract": {
+        "title": "Contract Errors & Loopholes",
+        "description": "Poorly drafted clauses, missing protections, or unfavorable terms that expose you to future disputes and financial liability.",
+        "impact": "Legal disputes lasting 2–5 years"
+      },
+      "debts": {
+        "title": "Undisclosed Debts or Restrictions",
+        "description": "Property tax arrears, municipal debts, building violations, or zoning restrictions that become your responsibility after purchase.",
+        "impact": "Average hidden costs: ₪150,000"
+      }
+    },
+    "cta": "Review My Transaction"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": {
+      "line1": "Premium Legal Services",
+      "accent": "for Your Real Estate Needs"
+    },
+    "subtitle": "Comprehensive legal protection tailored for high-value property transactions in Israel.",
+    "learnMore": "Learn More",
+    "bottom": {
+      "note": "Not sure which service you need?",
+      "cta": "Schedule a Free Consultation"
+    },
+    "cards": {
+      "full": {
+        "title": "Full Transaction Management",
+        "description": "End-to-end legal support from initial due diligence through final ownership registration. We handle every legal aspect of your property transaction.",
+        "features": [
+          "Contract drafting & review",
+          "Negotiation support",
+          "Closing coordination",
+          "Post-sale assistance"
+        ]
+      },
+      "dd": {
+        "title": "Property Due Diligence",
+        "description": "Comprehensive investigation of property history, ownership status, liens, restrictions, and potential legal issues before you commit.",
+        "features": [
+          "Title search",
+          "Lien verification",
+          "Zoning compliance",
+          "Building permit review"
+        ]
+      },
+      "invest": {
+        "title": "Investment Legal Support",
+        "description": "Specialized legal counsel for foreign investors and high-net-worth individuals seeking to build their Israeli real estate portfolio.",
+        "features": [
+          "Tax optimization",
+          "Entity structuring",
+          "Multi-property strategy",
+          "Exit planning"
+        ]
+      },
+      "disputes": {
+        "title": "Complex Legal Cases & Disputes",
+        "description": "Expert representation in property disputes, breach of contract, fraud claims, and litigation related to real estate transactions.",
+        "features": [
+          "Dispute resolution",
+          "Court representation",
+          "Arbitration & mediation",
+          "Damage claims"
+        ]
+      },
+      "lease": {
+        "title": "Lease & Contract Agreements",
+        "description": "Professional drafting and review of lease agreements, rental contracts, and commercial property agreements to protect your interests.",
+        "features": [
+          "Lease drafting",
+          "Tenant agreements",
+          "Commercial contracts",
+          "Terms negotiation"
+        ]
+      },
+      "dev": {
+        "title": "Development & Construction Legal",
+        "description": "Legal guidance for property development projects, construction contracts, and contractor agreements in Israel.",
+        "features": [
+          "Construction contracts",
+          "Permit assistance",
+          "Contractor disputes",
+          "Project compliance"
+        ]
+      }
+    }
+  },
+  "calculator": {
+    "badge": "Transparent Pricing",
+    "title": {
+      "line1": "Calculate the Cost of",
+      "accent": "Legal Support"
+    },
+    "subtitle": "Get an instant estimate for your real estate legal services. No hidden fees.",
+    "form": {
+      "transaction": {
+        "label": "Type of Transaction",
+        "options": {
+          "purchase": "Purchase",
+          "sale": "Sale",
+          "investment": "Investment"
+        }
+      },
+      "value": {
+        "label": "Property Value (₪)",
+        "aria": "Property value in shekels",
+        "increase": "Increase value",
+        "decrease": "Decrease value",
+        "hint": "Typical transactions start from ₪2,000,000+"
+      },
+      "city": {
+        "label": "City",
+        "aria": "Select city",
+        "options": {
+          "telAviv": "Tel Aviv",
+          "jerusalem": "Jerusalem",
+          "herzliya": "Herzliya",
+          "netanya": "Netanya",
+          "haifa": "Haifa",
+          "other": "Other"
+        }
+      },
+      "urgency": {
+        "label": "Urgency Level",
+        "options": {
+          "standard": { "label": "Standard", "time": "30 days" },
+          "urgent": { "label": "Urgent", "time": "14 days" },
+          "express": { "label": "Express", "time": "7 days" }
+        }
+      },
+      "dd": {
+        "title": "Full Due Diligence",
+        "subtitle": "Comprehensive property investigation",
+        "aria": "Toggle due diligence"
+      }
+    },
+    "result": {
+      "title": "Estimated Legal Fee",
+      "basedOn": "Based on {percent}% of property value"
+    },
+    "breakdown": {
+      "title": "Fee Breakdown",
+      "base": "Base Legal Fee",
+      "dd": "Due Diligence",
+      "ddPrice": "₪15,000",
+      "urgent": "Urgent Service",
+      "express": "Express Service",
+      "urgentAdd": "+30%",
+      "expressAdd": "+60%",
+      "cityFactor": "City Factor",
+      "cityAdd": "+10%",
+      "total": "Total Estimate"
+    },
+    "cta": "Get Exact Quote",
+    "disclaimer": "*This is an estimate. Final fees depend on transaction complexity and specific requirements."
+  },
+  "process": {
+    "badge": "Our Process",
+    "title": {
+      "line1": "Your Path to Secure",
+      "accent": "Property Ownership"
+    },
+    "subtitle": "A streamlined, transparent process designed to protect your investment at every stage.",
+    "deliverablesTitle": "Key Deliverables:",
+    "viewDetails": "View step details",
+    "steps": {
+      "s1": {
+        "title": "Initial Consultation",
+        "description": "We review your situation, transaction details, and objectives. Our experts assess the complexity and provide a clear roadmap for your property transaction.",
+        "duration": "1–2 days",
+        "deliverables": {
+          "d1": "Preliminary assessment",
+          "d2": "Fee structure",
+          "d3": "Timeline proposal",
+          "d4": "Team assignment"
+        }
+      },
+      "s2": {
+        "title": "Legal & Document Review",
+        "description": "Comprehensive due diligence on the property, including title search, lien verification, and document analysis. We identify risks and ensure legal clarity.",
+        "duration": "7–14 days",
+        "deliverables": {
+          "d1": "Title report",
+          "d2": "Lien search",
+          "d3": "Property history",
+          "d4": "Risk assessment"
+        }
+      },
+      "s3": {
+        "title": "Contract Preparation & Signing",
+        "description": "We draft or review the purchase agreement, negotiate terms, and ensure your interests are protected. Final review and signing coordination.",
+        "duration": "5–10 days",
+        "deliverables": {
+          "d1": "Contract draft",
+          "d2": "Terms negotiation",
+          "d3": "Final review",
+          "d4": "Signing coordination"
+        }
+      },
+      "s4": {
+        "title": "Ownership Registration",
+        "description": "We manage the transfer of ownership at the Land Registry, payment coordination, and ensure all legal requirements are met for final registration.",
+        "duration": "30–60 days",
+        "deliverables": {
+          "d1": "Registry filing",
+          "d2": "Transfer completion",
+          "d3": "Title deed",
+          "d4": "Final documentation"
+        }
+      }
+    },
+    "stats": {
+      "s1": { "value": "43–90", "label": "Average Days to Close" },
+      "s2": { "value": "24/7", "label": "Client Support" },
+      "s3": { "value": "100%", "label": "Transparency" },
+      "s4": { "value": "Real-Time", "label": "Status Updates" }
+    }
+  },
+  "crm": {
+    "badge": "Legal Tech Platform",
+    "title": {
+      "line1": "Full Transparency",
+      "accent": "Throughout the Process"
+    },
+    "subtitle": "Our legal-tech platform keeps you informed and in control at every stage — with secure storage, proactive updates, and clear milestones.",
+    "features": {
+      "f1": {
+        "title": "Online Transaction Status Tracking",
+        "description": "Monitor your property transaction progress in real-time through our secure client portal."
+      },
+      "f2": {
+        "title": "WhatsApp Updates",
+        "description": "Receive instant notifications about critical milestones and document requirements."
+      },
+      "f3": {
+        "title": "Secure Document Storage",
+        "description": "Access all your legal documents anytime, anywhere through encrypted cloud storage."
+      },
+      "f4": {
+        "title": "Automated Deadline Reminders",
+        "description": "Never miss an important date with our intelligent reminder system."
+      }
+    },
+    "dashboard": {
+      "title": "Transaction Dashboard",
+      "address": "Apt. 12B, Rothschild Blvd, Tel Aviv",
+      "status": "Active",
+      "progress": { "label": "Overall Progress", "value": "65%" },
+      "timeline": {
+        "t1": { "title": "Due Diligence Completed", "date": "Feb 15, 2026" },
+        "t2": {
+          "title": "Contract Review in Progress",
+          "date": "Expected: Feb 20, 2026"
+        },
+        "t3": {
+          "title": "Final Registration",
+          "date": "Pending previous steps"
+        }
+      },
+      "docs": {
+        "title": "Recent Documents",
+        "d1": "Title_Search_Report.pdf",
+        "d2": "Property_Valuation.pdf"
+      }
+    },
+    "whatsapp": {
+      "title": "WhatsApp Update",
+      "message": "Your contract has been reviewed. Please check the dashboard for details.",
+      "time": "Just now"
+    }
+  },
+  "testimonials": {
+    "badge": "Client Success Stories",
+    "title": {
+      "line1": "Trusted by High-Net-Worth",
+      "accent": "Property Investors"
+    },
+    "subtitle": "Hear from clients who secured their investments with our legal expertise.",
+    "verified": "Verified",
+    "stats": {
+      "s1": "Average Rating",
+      "s2": "Happy Clients",
+      "s3": "Secured",
+      "s4": "Success Rate"
+    }
+  },
+  "contact": {
+    "badge": "Get Started",
+    "title": {
+      "line1": "Get a Legal Evaluation",
+      "accent": "of Your Transaction"
+    },
+    "subtitle": "Share your details and our team will contact you within 24 hours.",
+
+    "helper": {
+      "before": "Your information is handled confidentially. We respond within ",
+      "highlight": "24 hours",
+      "after": "."
+    },
+
+    "fields": {
+      "name": { "label": "Full Name *", "placeholder": "David Cohen" },
+      "phone": { "label": "Phone Number *", "placeholder": "+972 50 123 4567" },
+      "email": {
+        "label": "Email Address *",
+        "placeholder": "david@example.com"
+      },
+      "value": {
+        "label": "Property Value (₪) *",
+        "placeholder": "2,000,000",
+        "note": "Typical transactions start from ₪2,000,000+"
+      },
+      "type": { "label": "Type of Transaction *" },
+      "desc": {
+        "label": "Brief Description",
+        "placeholder": "Tell us about your property transaction..."
+      }
+    },
+
+    "types": {
+      "purchase": "Purchase",
+      "sale": "Sale",
+      "investment": "Investment",
+      "lease": "Lease",
+      "dispute": "Legal Dispute"
+    },
+
+    "cta": "Request Consultation",
+    "footnote": "⏱️ We respond within 24 hours",
+
+    "success": {
+      "title": "Request received",
+      "text": "We’ve received your request. Our team will contact you within 24 hours.",
+      "badge": "Submission confirmed"
+    },
+
+    "direct": {
+      "title": "Direct Contact",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    },
+
+    "why": {
+      "title": "Why Choose Us?",
+      "items": [
+        "Specialized in high-value transactions",
+        "Foreign investor expertise",
+        "Real-time tech platform",
+        "98% success rate",
+        "Transparent pricing",
+        "Hebrew, English, Russian support"
+      ]
+    },
+
+    "office": {
+      "title": "Office Location",
+      "hours": "Office Hours: Sunday–Thursday, 9:00–18:00"
+    }
+  },
+  "finalCta": {
+    "title": {
+      "line1": "Real Estate in Israel",
+      "line2": "is a",
+      "accent": "Serious Investment."
+    },
+    "subtitle": "Make sure it’s legally protected — with expert guidance you can trust.",
+    "cta": "Schedule a Consultation",
+    "response": {
+      "before": "We respond within",
+      "highlight": "24 hours",
+      "after": "."
+    },
+    "stats": [
+      { "value": "500+", "label": "Transactions" },
+      { "value": "₪3.2B", "label": "Secured" },
+      { "value": "98%", "label": "Success Rate" },
+      { "value": "24h", "label": "Response Time" }
+    ]
+  },
+  "footer": {
+    "brandTagline": "Real Estate Law",
+    "brandDescription": "Premium legal services for high-value real estate transactions in Israel.",
+    "pill": "Confidential • Secure • Transparent",
+
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": [
+      { "id": "services", "label": "Services" },
+      { "id": "calculator", "label": "Pricing Calculator" },
+      { "id": "process", "label": "Our Process" },
+      { "id": "testimonials", "label": "Testimonials" },
+      { "id": "contact", "label": "Contact" }
+    ],
+
+    "servicesTitle": "Services",
+    "services": [
+      "Property Due Diligence",
+      "Full Transaction Management",
+      "Investment Legal Support",
+      "Legal Disputes & Claims",
+      "Lease & Contract Agreements"
+    ],
+
+    "contactTitle": "Contact",
+    "address": {
+      "line1": "Rothschild Boulevard 12",
+      "line2": "Tel Aviv, Israel 6688012"
+    },
+    "phone": "+972 50 123 4567",
+    "email": "info@legalguard.co.il",
+    "officeHours": "Office Hours: Sunday–Thursday, 9:00–18:00",
+
+    "copyright": "© {year} LegalGuard Real Estate Law. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "notice": "Legal Notice"
+    }
   }
 }

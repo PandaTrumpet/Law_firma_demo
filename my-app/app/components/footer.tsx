@@ -1,7 +1,16 @@
 // "use client";
 
+// import { useLocale } from "next-intl";
+// import { motion } from "motion/react";
+
+// import { Mail, Phone, MapPin } from "lucide-react";
+// import { useMotion } from "../lib/motion";
+
 // export function Footer() {
 //   const currentYear = new Date().getFullYear();
+//   const locale = useLocale();
+//   const isRTL = locale === "he";
+//   const m = useMotion({ y: 14, stagger: 0.06, delay: 0.05, duration: 0.7 });
 
 //   const scrollToSection = (id: string) => {
 //     const element = document.getElementById(id);
@@ -9,132 +18,252 @@
 //       const offset = 80;
 //       const elementPosition = element.getBoundingClientRect().top;
 //       const offsetPosition = elementPosition + window.pageYOffset - offset;
-//       window.scrollTo({
-//         top: offsetPosition,
-//         behavior: "smooth",
-//       });
+//       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
 //     }
 //   };
 
 //   return (
-//     <footer className="bg-[#0a1628] border-t border-white/10">
-//       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
-//         <div className="grid lg:grid-cols-4 gap-12 mb-12">
+//     <footer
+//       dir={isRTL ? "rtl" : "ltr"}
+//       className="relative overflow-hidden text-white"
+//     >
+//       {/* Background */}
+//       <div className="absolute inset-0 -z-10 bg-[#0F1E30]" />
+//       <div className="pointer-events-none absolute inset-0 -z-10">
+//         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] via-transparent to-black/10" />
+//         <div className="absolute -top-28 right-[-14%] h-96 w-96 rounded-full blur-3xl opacity-12 bg-[radial-gradient(circle,rgba(76,194,255,0.24),transparent_60%)]" />
+//         <div className="absolute -bottom-32 left-[-18%] h-[28rem] w-[28rem] rounded-full blur-3xl opacity-10 bg-[radial-gradient(circle,rgba(201,169,97,0.22),transparent_60%)]" />
+//         <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:96px_96px]" />
+//       </div>
+
+//       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 pb-10">
+//         <motion.div
+//           variants={m.container}
+//           initial="hidden"
+//           whileInView="show"
+//           viewport={m.viewport}
+//           className="grid gap-10 lg:gap-12 lg:grid-cols-4"
+//         >
 //           {/* Brand */}
-//           <div>
-//             <div className="flex items-center gap-3 mb-6">
-//               <div className="w-10 h-10 bg-gradient-to-br from-[#c9a961] to-[#a68a4e] rounded-md flex items-center justify-center">
-//                 <span className="text-[#0a1628] font-bold text-lg">L</span>
+//           <motion.div variants={m.item}>
+//             <div
+//               className={[
+//                 "  cursor-pointer",
+//                 "flex items-center gap-3",
+//                 isRTL ? "flex-row-reverse" : "",
+//               ].join(" ")}
+//             >
+//               <div className="w-10 h-10 bg-gradient-to-br from-[#c9a961] to-[#a68a4e] rounded-md flex items-center justify-center shadow-[0_18px_45px_rgba(201,169,97,0.18)]">
+//                 <span className="text-[#071023] font-bold text-lg">L</span>
 //               </div>
-//               <div>
+//               <div className={isRTL ? "text-right" : "text-left"}>
 //                 <div className="text-white font-semibold text-lg tracking-tight">
 //                   LegalGuard
 //                 </div>
-//                 <div className="text-[#c9a961] text-xs tracking-wider">
+//                 <div className="text-[#c9a961] text-xs tracking-[0.18em] uppercase">
 //                   Real Estate Law
 //                 </div>
 //               </div>
 //             </div>
-//             <p className="text-gray-400 text-sm leading-relaxed">
+
+//             <p
+//               className={[
+//                 "mt-5 text-slate-200/65 text-sm leading-relaxed max-w-[38ch]",
+//                 isRTL ? "text-right" : "text-left",
+//               ].join(" ")}
+//             >
 //               Premium legal services for high-value real estate transactions in
 //               Israel.
 //             </p>
-//           </div>
+
+//             <div
+//               className={[
+//                 "mt-6 inline-flex items-center gap-2 rounded-full px-3.5 py-2 bg-white/[0.04] border border-white/10 text-slate-200/70 text-xs",
+//                 isRTL ? "flex-row-reverse" : "",
+//               ].join(" ")}
+//             >
+//               <span className="h-1.5 w-1.5 rounded-full bg-[#c9a961]" />
+//               Confidential • Secure • Transparent
+//             </div>
+//           </motion.div>
 
 //           {/* Quick Links */}
-//           <div>
-//             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+//           <motion.div variants={m.item}>
+//             <h4 className="text-white/90 font-semibold mb-4">Quick Links</h4>
 //             <ul className="space-y-3">
-//               <li>
-//                 <button
-//                   onClick={() => scrollToSection("services")}
-//                   className="text-gray-400 hover:text-[#c9a961] transition-colors text-sm"
-//                 >
-//                   Services
-//                 </button>
-//               </li>
-//               <li>
-//                 <button
-//                   onClick={() => scrollToSection("calculator")}
-//                   className="text-gray-400 hover:text-[#c9a961] transition-colors text-sm"
-//                 >
-//                   Pricing Calculator
-//                 </button>
-//               </li>
-//               <li>
-//                 <button
-//                   onClick={() => scrollToSection("process")}
-//                   className="text-gray-400 hover:text-[#c9a961] transition-colors text-sm"
-//                 >
-//                   Our Process
-//                 </button>
-//               </li>
-//               <li>
-//                 <button
-//                   onClick={() => scrollToSection("testimonials")}
-//                   className="text-gray-400 hover:text-[#c9a961] transition-colors text-sm"
-//                 >
-//                   Testimonials
-//                 </button>
-//               </li>
+//               {[
+//                 { id: "services", label: "Services" },
+//                 { id: "calculator", label: "Pricing Calculator" },
+//                 { id: "process", label: "Our Process" },
+//                 { id: "testimonials", label: "Testimonials" },
+//                 { id: "contact", label: "Contact" },
+//               ].map((l) => (
+//                 <li key={l.id}>
+//                   <button
+//                     onClick={() => scrollToSection(l.id)}
+//                     className="
+//                       cursor-pointer
+//                       text-slate-200/60 hover:text-[#c9a961]
+//                       transition-colors text-sm
+//                       focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]/50
+//                       focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1E30]
+//                       rounded
+//                     "
+//                   >
+//                     {l.label}
+//                   </button>
+//                 </li>
+//               ))}
 //             </ul>
-//           </div>
+//           </motion.div>
 
-//           {/* Services */}
-//           <div>
-//             <h4 className="text-white font-semibold mb-4">Services</h4>
-//             <ul className="space-y-3 text-sm text-gray-400">
-//               <li>Property Due Diligence</li>
-//               <li>Transaction Management</li>
-//               <li>Investment Support</li>
-//               <li>Legal Disputes</li>
-//               <li>Contract Agreements</li>
+//           {/* Services list */}
+//           <motion.div variants={m.item}>
+//             <h4 className="text-white/90 font-semibold mb-4">Services</h4>
+//             <ul className="space-y-3 text-sm text-slate-200/60">
+//               {[
+//                 "Property Due Diligence",
+//                 "Full Transaction Management",
+//                 "Investment Legal Support",
+//                 "Legal Disputes & Claims",
+//                 "Lease & Contract Agreements",
+//               ].map((s) => (
+//                 <li key={s} className={isRTL ? "text-right" : "text-left"}>
+//                   {s}
+//                 </li>
+//               ))}
 //             </ul>
-//           </div>
+//           </motion.div>
 
 //           {/* Contact */}
-//           <div>
-//             <h4 className="text-white font-semibold mb-4">Contact</h4>
-//             <ul className="space-y-3 text-sm text-gray-400">
-//               <li>Rothschild Boulevard 12</li>
-//               <li>Tel Aviv, Israel 6688012</li>
-//               <li className="pt-2">
+//           <motion.div variants={m.item}>
+//             <h4 className="text-white/90 font-semibold mb-4">Contact</h4>
+
+//             <div
+//               className="
+//                 rounded-2xl p-5
+//                 bg-[#132235]
+//                 border border-white/10
+//                 shadow-[0_25px_80px_rgba(0,0,0,0.35)]
+//               "
+//             >
+//               <div className="space-y-3 text-sm text-slate-200/65">
+//                 <div
+//                   className={[
+//                     "flex items-start gap-3",
+//                     isRTL ? "flex-row-reverse text-right" : "text-left",
+//                   ].join(" ")}
+//                 >
+//                   <MapPin
+//                     size={18}
+//                     className="text-[#c9a961] mt-0.5 flex-shrink-0"
+//                   />
+//                   <div>
+//                     <div>Rothschild Boulevard 12</div>
+//                     <div>Tel Aviv, Israel 6688012</div>
+//                   </div>
+//                 </div>
+
+//                 <div className="pt-2 border-t border-white/10" />
+
 //                 <a
 //                   href="tel:+972501234567"
-//                   className="hover:text-[#c9a961] transition-colors"
+//                   className={[
+//                     "group flex items-center gap-3 hover:text-[#c9a961] transition-colors",
+//                     isRTL ? "flex-row-reverse text-right" : "text-left",
+//                   ].join(" ")}
 //                 >
-//                   +972-50-123-4567
+//                   <Phone
+//                     size={18}
+//                     className="text-[#86D7FF] group-hover:text-[#c9a961] transition-colors"
+//                   />
+//                   <span className="font-semibold text-white/90">
+//                     +972 50 123 4567
+//                   </span>
 //                 </a>
-//               </li>
-//               <li>
+
 //                 <a
 //                   href="mailto:info@legalguard.co.il"
-//                   className="hover:text-[#c9a961] transition-colors"
+//                   className={[
+//                     "group flex items-center gap-3 hover:text-[#c9a961] transition-colors",
+//                     isRTL ? "flex-row-reverse text-right" : "text-left",
+//                   ].join(" ")}
 //                 >
-//                   info@legalguard.co.il
+//                   <Mail
+//                     size={18}
+//                     className="text-[#86D7FF] group-hover:text-[#c9a961] transition-colors"
+//                   />
+//                   <span className="font-semibold text-white/90">
+//                     info@legalguard.co.il
+//                   </span>
 //                 </a>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
 
-//         {/* Bottom Bar */}
-//         <div className="pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-4">
-//           <p className="text-gray-500 text-sm">
+//                 <div className="pt-3 text-xs text-slate-200/50">
+//                   Office Hours: Sunday–Thursday, 9:00–18:00
+//                 </div>
+//               </div>
+//             </div>
+//           </motion.div>
+//         </motion.div>
+
+//         {/* Bottom bar */}
+//         <motion.div
+//           initial={m.fadeUp.initial}
+//           whileInView={m.fadeUp.whileInView}
+//           viewport={m.viewport}
+//           className="
+//             mt-10 pt-6
+//             border-t border-white/10
+//             flex flex-col md:flex-row
+//             items-center justify-between
+//             gap-4
+//           "
+//         >
+//           <p className="text-slate-200/45 text-sm">
 //             © {currentYear} LegalGuard Real Estate Law. All rights reserved.
 //           </p>
-//           <div className="flex gap-6 text-sm text-gray-500">
-//             <a href="#" className="hover:text-[#c9a961] transition-colors">
+
+//           <div
+//             className={[
+//               "flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-200/45",
+//               isRTL ? "justify-center" : "",
+//             ].join(" ")}
+//           >
+//             <a
+//               href="#"
+//               className="
+//                 hover:text-[#c9a961] transition-colors
+//                 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]/50
+//                 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1E30]
+//                 rounded
+//               "
+//             >
 //               Privacy Policy
 //             </a>
-//             <a href="#" className="hover:text-[#c9a961] transition-colors">
+//             <a
+//               href="#"
+//               className="
+//                 hover:text-[#c9a961] transition-colors
+//                 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]/50
+//                 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1E30]
+//                 rounded
+//               "
+//             >
 //               Terms of Service
 //             </a>
-//             <a href="#" className="hover:text-[#c9a961] transition-colors">
+//             <a
+//               href="#"
+//               className="
+//                 hover:text-[#c9a961] transition-colors
+//                 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]/50
+//                 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1E30]
+//                 rounded
+//               "
+//             >
 //               Legal Notice
 //             </a>
 //           </div>
-//         </div>
+//         </motion.div>
 //       </div>
 //     </footer>
 //   );
@@ -142,9 +271,8 @@
 
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "motion/react";
-
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useMotion } from "../lib/motion";
 
@@ -152,6 +280,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   const locale = useLocale();
   const isRTL = locale === "he";
+  const t = useTranslations("footer");
   const m = useMotion({ y: 14, stagger: 0.06, delay: 0.05, duration: 0.7 });
 
   const scrollToSection = (id: string) => {
@@ -163,6 +292,12 @@ export function Footer() {
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
+
+  const quickLinks = t.raw("quickLinks") as unknown as {
+    id: string;
+    label: string;
+  }[];
+  const services = t.raw("services") as unknown as string[];
 
   return (
     <footer
@@ -190,7 +325,7 @@ export function Footer() {
           <motion.div variants={m.item}>
             <div
               className={[
-                "  cursor-pointer",
+                "cursor-pointer",
                 "flex items-center gap-3",
                 isRTL ? "flex-row-reverse" : "",
               ].join(" ")}
@@ -203,7 +338,7 @@ export function Footer() {
                   LegalGuard
                 </div>
                 <div className="text-[#c9a961] text-xs tracking-[0.18em] uppercase">
-                  Real Estate Law
+                  {t("brandTagline")}
                 </div>
               </div>
             </div>
@@ -214,8 +349,7 @@ export function Footer() {
                 isRTL ? "text-right" : "text-left",
               ].join(" ")}
             >
-              Premium legal services for high-value real estate transactions in
-              Israel.
+              {t("brandDescription")}
             </p>
 
             <div
@@ -225,21 +359,17 @@ export function Footer() {
               ].join(" ")}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#c9a961]" />
-              Confidential • Secure • Transparent
+              {t("pill")}
             </div>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={m.item}>
-            <h4 className="text-white/90 font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white/90 font-semibold mb-4">
+              {t("quickLinksTitle")}
+            </h4>
             <ul className="space-y-3">
-              {[
-                { id: "services", label: "Services" },
-                { id: "calculator", label: "Pricing Calculator" },
-                { id: "process", label: "Our Process" },
-                { id: "testimonials", label: "Testimonials" },
-                { id: "contact", label: "Contact" },
-              ].map((l) => (
+              {quickLinks.map((l) => (
                 <li key={l.id}>
                   <button
                     onClick={() => scrollToSection(l.id)}
@@ -261,15 +391,11 @@ export function Footer() {
 
           {/* Services list */}
           <motion.div variants={m.item}>
-            <h4 className="text-white/90 font-semibold mb-4">Services</h4>
+            <h4 className="text-white/90 font-semibold mb-4">
+              {t("servicesTitle")}
+            </h4>
             <ul className="space-y-3 text-sm text-slate-200/60">
-              {[
-                "Property Due Diligence",
-                "Full Transaction Management",
-                "Investment Legal Support",
-                "Legal Disputes & Claims",
-                "Lease & Contract Agreements",
-              ].map((s) => (
+              {services.map((s) => (
                 <li key={s} className={isRTL ? "text-right" : "text-left"}>
                   {s}
                 </li>
@@ -279,7 +405,9 @@ export function Footer() {
 
           {/* Contact */}
           <motion.div variants={m.item}>
-            <h4 className="text-white/90 font-semibold mb-4">Contact</h4>
+            <h4 className="text-white/90 font-semibold mb-4">
+              {t("contactTitle")}
+            </h4>
 
             <div
               className="
@@ -301,8 +429,8 @@ export function Footer() {
                     className="text-[#c9a961] mt-0.5 flex-shrink-0"
                   />
                   <div>
-                    <div>Rothschild Boulevard 12</div>
-                    <div>Tel Aviv, Israel 6688012</div>
+                    <div>{t("address.line1")}</div>
+                    <div>{t("address.line2")}</div>
                   </div>
                 </div>
 
@@ -320,7 +448,7 @@ export function Footer() {
                     className="text-[#86D7FF] group-hover:text-[#c9a961] transition-colors"
                   />
                   <span className="font-semibold text-white/90">
-                    +972 50 123 4567
+                    {t("phone")}
                   </span>
                 </a>
 
@@ -336,12 +464,12 @@ export function Footer() {
                     className="text-[#86D7FF] group-hover:text-[#c9a961] transition-colors"
                   />
                   <span className="font-semibold text-white/90">
-                    info@legalguard.co.il
+                    {t("email")}
                   </span>
                 </a>
 
                 <div className="pt-3 text-xs text-slate-200/50">
-                  Office Hours: Sunday–Thursday, 9:00–18:00
+                  {t("officeHours")}
                 </div>
               </div>
             </div>
@@ -362,7 +490,7 @@ export function Footer() {
           "
         >
           <p className="text-slate-200/45 text-sm">
-            © {currentYear} LegalGuard Real Estate Law. All rights reserved.
+            {t("copyright", { year: currentYear })}
           </p>
 
           <div
@@ -380,7 +508,7 @@ export function Footer() {
                 rounded
               "
             >
-              Privacy Policy
+              {t("links.privacy")}
             </a>
             <a
               href="#"
@@ -391,7 +519,7 @@ export function Footer() {
                 rounded
               "
             >
-              Terms of Service
+              {t("links.terms")}
             </a>
             <a
               href="#"
@@ -402,7 +530,7 @@ export function Footer() {
                 rounded
               "
             >
-              Legal Notice
+              {t("links.notice")}
             </a>
           </div>
         </motion.div>
