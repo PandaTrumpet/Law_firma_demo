@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "motion/react";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
+import foto from "../../public/foto.png"
 export function HeroSection() {
   const t = useTranslations("hero");
   const locale = useLocale();
@@ -292,9 +292,9 @@ export function HeroSection() {
                 </div>
 
                 <div className="space-y-4 pt-12">
-                  <div className="relative h-48 rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.55)]">
+                  <div className="relative h-70 rounded-2xl overflow-hidden border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.55)]">
                     <ImageWithFallback
-                      src="https://images.unsplash.com/photo-1736939681295-bb2e6759dddc?auto=format&fit=crop&w=1600&q=80"
+                      src={foto}
                       alt={t("media.attorneyAlt")}
                       fill
                       sizes="(min-width: 1024px) 40vw, 100vw"
